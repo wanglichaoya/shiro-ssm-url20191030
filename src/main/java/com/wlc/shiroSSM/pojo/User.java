@@ -1,20 +1,19 @@
 package com.wlc.shiroSSM.pojo;
 
 public class User {
+    private Long id;
 
-    private int id;
     private String name;
+
     private String password;
+
     private String salt;
 
-    public User() {
-    }
-
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -23,7 +22,7 @@ public class User {
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.name = name == null ? null : name.trim();
     }
 
     public String getPassword() {
@@ -31,7 +30,7 @@ public class User {
     }
 
     public void setPassword(String password) {
-        this.password = password;
+        this.password = password == null ? null : password.trim();
     }
 
     public String getSalt() {
@@ -39,13 +38,6 @@ public class User {
     }
 
     public void setSalt(String salt) {
-        this.salt = salt;
-    }
-
-    public User(int id, String name, String password, String salt) {
-        this.id = id;
-        this.name = name;
-        this.password = password;
-        this.salt = salt;
+        this.salt = salt == null ? null : salt.trim();
     }
 }

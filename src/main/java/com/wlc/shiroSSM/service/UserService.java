@@ -2,8 +2,22 @@ package com.wlc.shiroSSM.service;
 
 import com.wlc.shiroSSM.pojo.User;
 
-public interface UserService {
-	public String getPassword(String name);
+import java.util.List;
 
-	User getUser(String userName);
+public interface UserService {
+    String getPassword(String name);
+
+    User getByName(String name);
+
+    List<User> list();
+
+    void add(User user);
+
+    void delete(Long id);
+
+    User get(Long id);
+
+    void update(User user);
+
+
 }

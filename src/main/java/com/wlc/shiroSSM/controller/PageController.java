@@ -16,18 +16,25 @@ public class PageController {
     public String index() {
         return "index";
     }
+
     @RequestMapping("registerPage")
-    public String registerPage(){
+    public String registerPage() {
         return "register2";
     }
 
-    @RequiresPermissions("deleteOrder")
+    /*
+     需要 deleteOrder 的权限才可以访问
+     @RequiresPermissions("deleteOrder")
+
+     */
     @RequestMapping("deleteOrder")
     public String deleteOrder() {
         return "deleteOrder";
     }
 
-    @RequiresRoles("productManager")
+    /*
+    需要 productManager 的角色才可以访问
+    @RequiresRoles("productManager")*/
     @RequestMapping("deleteProduct")
     public String deleteProduct() {
         return "deleteProduct";

@@ -34,8 +34,9 @@ public class DatabaseRealm extends AuthorizingRealm {
 		String userName =(String) principalCollection.getPrimaryPrincipal();
 		//通过service获取角色和权限
 		Set<String> permissions = permissionService.listPermissions(userName);
-		Set<String> roles = roleService.listRoles(userName);
-		
+		/*Set<String> roles = roleService.listRoles(userName);*/
+		Set<String> roles = roleService.listRoleNames(userName);
+
 		//授权对象
 		SimpleAuthorizationInfo s = new SimpleAuthorizationInfo();
 		//把通过service获取到的角色和权限放进去
@@ -51,7 +52,8 @@ public class DatabaseRealm extends AuthorizingRealm {
 		String userName= token.getPrincipal().toString();
 		String password= new String( t.getPassword());
 
-		User user = userService.getUser(userName);
+		/*User user = userService.getUser(userName);*/
+		User user = userService.getByName(userName);
 		//获取数据库中的密码
 		/*String passwordInDB = userService.getPassword(userName);*/
          String passwordInDB = user.getPassword();

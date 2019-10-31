@@ -1,12 +1,21 @@
 package com.wlc.shiroSSM.mapper;
 
 import com.wlc.shiroSSM.pojo.User;
+import com.wlc.shiroSSM.pojo.UserExample;
+import java.util.List;
 
 public interface UserMapper {
+    int deleteByPrimaryKey(Long id);
 
-	public User getByName(String name);
+    int insert(User record);
 
-    int createUser(User user);
+    int insertSelective(User record);
 
-    User getUser(String userName);
+    List<User> selectByExample(UserExample example);
+
+    User selectByPrimaryKey(Long id);
+
+    int updateByPrimaryKeySelective(User record);
+
+    int updateByPrimaryKey(User record);
 }

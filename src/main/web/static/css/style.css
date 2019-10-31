@@ -4,11 +4,12 @@ span.desc{
 }
 div.workingroom{
     margin:200px auto;
-    width:400px;
+    width:600px;
+    position:relative;
 }
 div.workingroom a{
-    display:inline-block;
-    margin-top:20px;
+    /*  display:inline-block; */
+    /*  margin-top:20px; */
 }
 div.loginDiv{
     text-align: left;
@@ -16,4 +17,30 @@ div.loginDiv{
 div.errorInfo{
     color:red;
     font-size:0.65em;
+}
+div.workingroom td{
+    border:1px solid black;
+}
+div.workingroom table{
+    border-collapse:collapse;
+    width:100%;
+}
+
+div.workingroom td{
+    border:1px solid black;
+}
+
+div.workingroom div.menu{
+    position:absolute;
+    left:-160px;
+    top:-20px;
+}
+div.workingroom div.menu a{
+    display:block;
+    margin-top:20px;
+}
+
+div.workingroom div.addOrEdit{
+    margin:20px;
+    text-align:center;
 }

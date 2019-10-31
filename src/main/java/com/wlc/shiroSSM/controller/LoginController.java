@@ -47,7 +47,7 @@ public class LoginController {
         }  
 	}
 
-	@RequestMapping("/register")
+	/*@RequestMapping("/register")
 	public String register(Model model,String name,String password){
 	    //加密次数
 	    int time = 2;
@@ -85,7 +85,7 @@ public class LoginController {
 
         List<Permission> permissionList = permissionMapper.listPermissionsByUserName("zhang3");
         System.out.println("permissionList->" + permissionList.get(0).getName());
-    }
+    }*/
 	
 
 
